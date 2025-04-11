@@ -42,24 +42,24 @@ Manage a DevOps project using Git best practices, hosted on GitHub, and develope
 
 ### 4.Branching Workflow
 
-### Created dev branch
+- Created dev branch
   ```bash
   git checkout -b dev
   git push origin dev
 
-### Created feature/disk-usage branch
+- Created feature/disk-usage branch
   ```bash
   git checkout -b feature/disk-usage
 
-###Added disk usage to system_check.py.
-###Committed and pushed:`
+- Added disk usage to system_check.py.
+- Committed and pushed:`
   ```bash
   git add system_check.py
   git commit -m "Add disk usage monitoring to system_check.py"
   git push origin feature/disk-usage
 
-###Created PR from feature/disk-usage to dev and merged.
-###Created PR from dev to main and merged.
+- Created PR from feature/disk-usage to dev and merged.
+- Created PR from dev to main and merged.
 
 ### 5. Git Tags
   ```bash
@@ -67,5 +67,5 @@ Manage a DevOps project using Git best practices, hosted on GitHub, and develope
   git push origin v1.0.0
 
 ### 6. Documentation
-### Created this TASKS.md to document all steps.
-###Updated README.md with project overview and setup instructions.
+- Created this TASKS.md to document all steps.
+- Updated README.md with project overview and setup instructions.
