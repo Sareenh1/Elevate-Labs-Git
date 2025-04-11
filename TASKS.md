@@ -33,7 +33,7 @@ git config --global user.email "Sareenh10@gmail.com"
 
 #### Clone Repository
 ```bash
-git clone https://github.com/<your-username>/devops-task4.git
+git clone https://github.com/Sareenh1/Elevate-Labs-Git.git
 ```
 
 - Created files:
