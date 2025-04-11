@@ -6,66 +6,78 @@ Manage a DevOps project using Git best practices, hosted on GitHub, and develope
 ## Steps and Commands
 
 ### 1. Set Up EC2 Instance
-- Launched a t2.micro Ubuntu 22.04 instance on AWS.
+- Launched a t2.micro Ubuntu 22.04 instance on AWS
 - Connected via SSH:
-  ```bash
-  ssh -i task4-key.pem ubuntu@<PUBLIC_IP>
 
-###  Installed Git
-  ```bash
-  sudo apt update
-  sudo apt install git -y
+```bash
+ssh -i task4-key.pem ubuntu@<PUBLIC_IP>
+```
 
-###  Configured Git
-  ```bash
-  git config --global user.name "Sareenh1"
-  git config --global user.email "Sareenh10@gmail.com"
+### 2. Install and Configure Git
 
-### 2. Create GitHub Repository
-  - Created devops-task4 repository on GitHub.
-  - Generated a personal access token for authentication.
+#### Install Git
+```bash
+sudo apt update
+sudo apt install git -y
+```
 
-### 3. Initialize Repository
-###   Cloned Repository
-  ```bash
-  git clone https://github.com/<your-username>/devops-task4.git
+#### Configure Git
+```bash
+git config --global user.name "Sareenh1"
+git config --global user.email "Sareenh10@gmail.com"
+```
 
-- Created system_check.py for system monitoring (CPU, memory).
--Added .gitignore for Python projects.
--Wrote README.md with project details.
+### 3. Create and Initialize Repository
+- Created devops-task4 repository on GitHub
+- Generated personal access token
 
-### Initial commit
-  ```bash
-  git add .
-  git commit -m "Initial commit: Add system_check.py, .gitignore, and README.md"
-  git push origin main
+#### Clone Repository
+```bash
+git clone https://github.com/<your-username>/devops-task4.git
+```
 
-### 4.Branching Workflow
+- Created files:
+  - system_check.py (system monitoring)
+  - .gitignore (for Python)
+  - README.md (project docs)
 
-- Created dev branch
-  ```bash
-  git checkout -b dev
-  git push origin dev
+#### Initial Commit
+```bash
+git add .
+git commit -m "Initial commit: Add system_check.py, .gitignore, and README.md"
+git push origin main
+```
 
-- Created feature/disk-usage branch
-  ```bash
-  git checkout -b feature/disk-usage
+### 4. Branching Workflow
 
-- Added disk usage to system_check.py.
-- Committed and pushed:`
-  ```bash
-  git add system_check.py
-  git commit -m "Add disk usage monitoring to system_check.py"
-  git push origin feature/disk-usage
+#### Create Development Branch
+```bash
+git checkout -b dev
+git push origin dev
+```
 
-- Created PR from feature/disk-usage to dev and merged.
-- Created PR from dev to main and merged.
+#### Create Feature Branch
+```bash
+git checkout -b feature/disk-usage
+```
 
-### 5. Git Tags
-  ```bash
-  git tag -a v1.0.0 -m "Release 1.0.0: Initial system monitoring with CPU, memory, and disk"
-  git push origin v1.0.0
+- Added disk monitoring to system_check.py
+- Pushed changes:
+
+```bash
+git add system_check.py
+git commit -m "Add disk usage monitoring"
+git push origin feature/disk-usage
+```
+
+- Merged via PRs: feature → dev → main
+
+### 5. Create Release Tag
+```bash
+git tag -a v1.0.0 -m "Initial release with system monitoring"
+git push origin v1.0.0
+```
 
 ### 6. Documentation
-- Created this TASKS.md to document all steps.
-- Updated README.md with project overview and setup instructions.
+- Created TASKS.md (this file)
+- Updated README.md
